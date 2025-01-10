@@ -1,0 +1,103 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Blank_A4_1" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="63c8b08c-c1b1-41e4-8b35-d7793715c21e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="studentID" class="java.lang.String"/>
+	<parameter name="paymentID" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="time" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
+	<parameter name="paymentMethod" class="java.lang.String"/>
+	<query language="sql"><![CDATA[]]></query>
+	<field name="Course" class="java.lang.String"/>
+	<field name="Fee" class="java.lang.String"/>
+	<field name="studentID" class="java.lang.String"/>
+	<field name="paymentID" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="time" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="paymentMethod" class="java.lang.String"/>
+	<variable name="StudentID" class="java.lang.String"/>
+	<variable name="InvoiceID" class="java.lang.String"/>
+	<variable name="Date" class="java.lang.String"/>
+	<variable name="Time" class="java.lang.String"/>
+	<variable name="Course" class="java.lang.String">
+		<expression><![CDATA[$V{Course}]]></expression>
+	</variable>
+	<variable name="Fee" class="java.lang.String"/>
+	<variable name="PaymentMethod" class="java.lang.String"/>
+	<variable name="Total" class="java.lang.String"/>
+	<background splitType="Stretch"/>
+	<title height="38" splitType="Stretch">
+		<element kind="staticText" uuid="185d035e-5856-4a08-8475-fc43436e0415" x="-20" y="-10" width="595" height="40" rotation="None" fontName="Times New Roman" fontSize="20.0" bold="true" hTextAlign="Center">
+			<paragraph lineSpacing="Single"/>
+			<text><![CDATA[PAYMENT INVOICE]]></text>
+		</element>
+	</title>
+	<pageHeader height="69" splitType="Stretch">
+		<element kind="staticText" uuid="a6e2ce34-864b-4545-a3d7-7221a2fdff4c" x="-10" y="29" width="100" height="20" bold="true">
+			<text><![CDATA[DATE:-]]></text>
+		</element>
+		<element kind="staticText" uuid="bb529c8a-87aa-472f-b519-6f52e728963d" x="-10" y="0" width="100" height="20" bold="true">
+			<text><![CDATA[STUDENT ID:-]]></text>
+		</element>
+		<element kind="staticText" uuid="fdec5513-ea5f-4d31-835a-6e8bd6feda65" x="340" y="0" width="100" height="20" bold="true">
+			<text><![CDATA[PAYMENT ID:-]]></text>
+		</element>
+		<element kind="staticText" uuid="2dfab63a-5a38-487d-8b02-4c9d3b05a67c" x="340" y="30" width="100" height="20" bold="true">
+			<text><![CDATA[TIME:-]]></text>
+		</element>
+		<element kind="textField" uuid="0ec23739-8e56-4289-91c0-a95e9dc1636c" x="100" y="0" width="150" height="20" bold="true">
+			<expression><![CDATA[$P{studentID}]]></expression>
+		</element>
+		<element kind="textField" uuid="fbd2e1f3-b87c-4509-b171-10aba33a8b0f" x="450" y="0" width="110" height="20" bold="true">
+			<expression><![CDATA[$P{paymentID}]]></expression>
+		</element>
+		<element kind="textField" uuid="04373e1e-a2d3-4b2f-aa7a-a5e97068da8b" x="100" y="30" width="150" height="20" bold="true">
+			<expression><![CDATA[$P{date}]]></expression>
+		</element>
+		<element kind="textField" uuid="34070b4c-d6e7-4cca-829f-90ade43c24be" x="452" y="29" width="108" height="21" bold="true">
+			<expression><![CDATA[$P{time}]]></expression>
+		</element>
+	</pageHeader>
+	<columnHeader height="31" splitType="Stretch">
+		<element kind="staticText" uuid="38f4b4f3-b98f-4c96-9c56-6e67d3a5f519" x="0" y="0" width="380" height="30" fontName="Times New Roman" fontSize="14.0" bold="true">
+			<text><![CDATA[Course]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84549de5-6e06-4061-83a6-c2d7a7f1bdf7"/>
+		</element>
+		<element kind="staticText" uuid="465106f2-5816-4fbb-b249-ea69e7679497" x="450" y="0" width="104" height="30" fontName="Times New Roman" fontSize="14.0" bold="true">
+			<text><![CDATA[Fee]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3af1e275-1985-4c56-9f60-ba81e63550c4"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="129" splitType="Stretch">
+			<element kind="textField" uuid="0ee19ae1-eb8d-41ec-92c3-b74dd0eb7116" x="0" y="10" width="380" height="30" fontName="&#xd;&#xa;Times New Roman" fontSize="12.0">
+				<expression><![CDATA[$F{Course}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84549de5-6e06-4061-83a6-c2d7a7f1bdf7"/>
+			</element>
+			<element kind="textField" uuid="8bb9c9e2-f958-49e5-9eb2-4af0753ee949" x="450" y="10" width="103" height="30" fontName="&#xd;&#xa;Times New Roman" fontSize="12.0">
+				<expression><![CDATA[$F{Fee}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3af1e275-1985-4c56-9f60-ba81e63550c4"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="80" splitType="Stretch">
+		<element kind="staticText" uuid="e7b923b6-2f5c-4140-983a-c2e327c8f4ff" x="-10" y="40" width="130" height="20" fontName="Times New Roman" fontSize="12.0" bold="true">
+			<text><![CDATA[PAYMENT METHOD:-]]></text>
+		</element>
+		<element kind="staticText" uuid="4f10175e-3bfb-409b-a19c-c62a4b444d25" x="-10" y="10" width="130" height="20" fontName="Times New Roman" fontSize="12.0" bold="true">
+			<text><![CDATA[TOTAL:-]]></text>
+		</element>
+		<element kind="textField" uuid="a57d67e1-a8ee-41c9-bdde-0946e6390a80" x="130" y="10" width="250" height="20" linkTarget="Self" bold="true">
+			<expression><![CDATA[$P{total}]]></expression>
+		</element>
+		<element kind="textField" uuid="dc317662-8260-4065-9b22-f3eda2dadbdb" x="130" y="40" width="250" height="20" linkTarget="Self" bold="true">
+			<expression><![CDATA[$P{paymentMethod}]]></expression>
+		</element>
+	</columnFooter>
+	<pageFooter height="58" splitType="Stretch">
+		<element kind="staticText" uuid="17be601a-8783-4652-ace0-290e2be4b042" x="-20" y="0" width="595" height="58" fontName="Times New Roman" fontSize="26.0" hTextAlign="Center">
+			<text><![CDATA[THANK YOU!]]></text>
+		</element>
+	</pageFooter>
+</jasperReport>
